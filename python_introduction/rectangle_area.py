@@ -1,4 +1,5 @@
 length = 10
 width = 5
-Area = length * width
-print ("The area of the rectangle is: 50")
+area = length * width
+product_result = length * width
+print("Product of", length, "and", width, "is", product_result)
