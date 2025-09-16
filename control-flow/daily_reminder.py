@@ -5,25 +5,33 @@ task = input("Enter your task: ")
 priority = input("Priority (high/medium/low): ").lower()
 time_bound = input("Is it time-bound? (yes/no): ").lower()
 
-# Loop (to demonstrate control flow, though it runs once here)
+# Loop (demonstration of control flow)
 while True:
-    # Use match-case for priority handling
+    # Match-case for priority handling
     match priority:
         case "high":
-            reminder = f"Reminder: '{task}' is a high priority task"
+            if time_bound == "yes":
+                reminder = f"🚨 Reminder: '{task}' is a HIGH priority task that requires immediate attention today!"
+            else:
+                reminder = f"Reminder: '{task}' is a HIGH priority task. Plan to finish it as soon as possible."
+        
         case "medium":
-            reminder = f"Reminder: '{task}' is a medium priority task"
+            if time_bound == "yes":
+                reminder = f"⚠️ Reminder: '{task}' is a MEDIUM priority task, but since it's time-sensitive, do it today!"
+            else:
+                reminder = f"Reminder: '{task}' is a MEDIUM priority task. Try to schedule it soon."
+        
         case "low":
-            reminder = f"Note: '{task}' is a low priority task. Consider completing it when you have free time."
+            if time_bound == "yes":
+                reminder = f"⏰ Reminder: '{task}' is a LOW priority task, but it is time-bound, so handle it today!"
+            else:
+                reminder = f"Note: '{task}' is a LOW priority task. Do it when you have free time."
+        
         case _:
-            reminder = f"Reminder: '{task}' has an unknown priority level."
+            reminder = f"Reminder: '{task}' has an unknown priority. Please double-check."
 
-    # Check if the task is time-bound
-    if time_bound == "yes":
-        reminder += " that requires immediate attention today!"
-
-    # Print the reminder
+    # Print the customized reminder
     print("\n" + reminder)
 
-    # Exit loop (we only need one reminder)
+    # Exit loop after one reminder
     break
