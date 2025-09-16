@@ -3,7 +3,7 @@
 # Ask the user for inputs
 task = input("Enter your task: ")
 priority = input("Enter the task priority (high/medium/low): ").lower()
-time_bound = input("Is this task time-bound? (yes/no): ").lower()
+time_bound = input("Is this it time-bound? (yes/no): ").lower()
 
 # Loop just to demonstrate control flow (runs once here)
 while True:
