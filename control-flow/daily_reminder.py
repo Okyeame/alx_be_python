@@ -20,7 +20,7 @@ while True:
 
     # Check if the task is time-bound
     if time_bound == "yes":
-        reminder += " This requires immediate attention today!"
+        reminder += " is a high priority task that requires immediate attention today!"
 
     # Print the customized reminder
     print(reminder)
