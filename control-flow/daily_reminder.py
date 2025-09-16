@@ -11,27 +11,24 @@ while True:
     match priority:
         case "high":
             if time_bound == "yes":
-                reminder = f"Reminder: '{task}' is a high priority task that requires immediate attention today!"
+                print(f"Reminder: '{task}' is HIGH priority and urgent — complete it immediately today!")
             else:
-                reminder = f"Reminder: '{task}' is a high priority task. Plan to finish it soon."
+                print(f"Reminder: '{task}' is HIGH priority. Make sure you finish it soon.")
         
         case "medium":
             if time_bound == "yes":
-                reminder = f"Reminder: '{task}' is a medium priority task that requires immediate attention today!"
+                print(f"Reminder: '{task}' is MEDIUM priority but urgent — don’t delay, finish it today!")
             else:
-                reminder = f"Reminder: '{task}' is a medium priority task. Try to schedule it soon."
+                print(f"Reminder: '{task}' is MEDIUM priority. Try to schedule it in your day.")
         
         case "low":
             if time_bound == "yes":
-                reminder = f"Reminder: '{task}' is a low priority task that requires immediate attention today!"
+                print(f"Reminder: '{task}' is LOW priority but urgent — it still needs to be done today!")
             else:
-                reminder = f"Reminder: '{task}' is a low priority task. Consider completing it when you have free time."
+                print(f"Reminder: '{task}' is LOW priority. Do it when you have free time.")
         
         case _:
-            reminder = f"Reminder: '{task}' has an unknown priority. Please double-check."
-
-    # Print the customized reminder
-    print(reminder)
+            print(f"Reminder: '{task}' has an unknown priority. Please double-check what you entered.")
 
     # Exit loop after one reminder
     break
